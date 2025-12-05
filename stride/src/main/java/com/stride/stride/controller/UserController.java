@@ -1,5 +1,6 @@
 package com.stride.stride.controller;
 
+import com.stride.stride.dto.UserDTO;
 import com.stride.stride.entity.User;
 import com.stride.stride.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class UserController {
     private UserServiceImpl userService;
 
     @GetMapping("/")
-    public List<User> index() {
+    public List<UserDTO> index() {
         return userService.getUsers();
     }
 }
